@@ -1,0 +1,1 @@
+const axios=require("axios"); axios.post("http://localhost:3000/api/v1/sync-order", {orderId:"TEST-1", total:999, items:[{sku:"A1"}]}).then(r=>console.log("УСПЕХ:", r.data)).catch(e=>console.log("ОШИБКА:", e.message));

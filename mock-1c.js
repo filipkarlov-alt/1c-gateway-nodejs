@@ -1,0 +1,1 @@
+const http=require("http"); const s=http.createServer((req,res)=>{let b=""; req.on("data",c=>b+=c); req.on("end",()=>{console.log("[1C] Запрос"); res.writeHead(200,{"Content-Type":"application/json"}); res.end(JSON.stringify({status:"ok", message:"Принят"}));});}); s.listen(8081,()=>console.log("Mock 1C запущен"));
